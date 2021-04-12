@@ -3,5 +3,5 @@ MAINTAINER swan  <info@squareflakes.com>
 COPY . /app
 WORKDIR /app
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip freeze > requirements.txt
 ENTRYPOINT robot -d results Tests/Facade/SolutionCenterApi.robot
